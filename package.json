@@ -1,6 +1,6 @@
 {
   "name": "jean-splash-screen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides functionality for displaying a splash screen",
   "main": "dist/jean-splash-screen.js",
   "scripts": {
