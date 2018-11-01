@@ -25,20 +25,35 @@ define([ // jscs:ignore
                 path: TypeCheck.isString(options.path) ? options.path : Failure.throwTypeError("options.path is not a string"),
                 html: '<div id="jean-splash-screen"></div>'
             }, TypeCheck.isDefined(options) ? options : {}));
-            this.element.style.width = "100%";
-            this.element.style.height = "100%";
-            this.element.style.position = "fixed";
-            this.element.style.zIndex = "10000";
-            this.element.style.top = "0";
-            this.element.style.left = "0";
-            this.element.style.background = 'url("' + this.options.path + '")';
-            this.element.style.backgroundSize = "cover";
-            this.element.style.backgroundPosition = "center";
-            /*  this.img = DomUtil.getChildById(this.element, "jean-splash-screen-img");
-             this.img.style.width = "100%";
-             this.img.style.height = "100%";
-             this.img.style.backgroundSize = "cover"; */
+            var style = this.element.style;
+            style.width = "100%";
+            style.height = "100%";
+            style.position = "fixed";
+            style.zIndex = "10000";
+            style.top = "0";
+            style.left = "0";
+            style.background = 'url("' + this.options.path + '")';
+            style.backgroundSize = "cover";
+            style.backgroundPosition = "center";
+            style.transition = "height 0.3s"; 
         };
         Inheritance.inheritPrototype(SplashScreen, DomElement);
+        /** */
+        SplashScreen.prototype.state = {
+            SHOW: "show",
+            HIDE: "hide"
+        };
+        /** */
+        SplashScreen.prototype.setState = function (state) {
+            if (TypeCheck.isEnumValue(state, this.state)) {
+                if (state === this.state.SHOW) {
+                    this.element.style.height = "100%";
+                } else if (state === this.state.HIDE) {
+                    this.element.style.height = "0";
+                }
+            } else {
+                Failure.throwTypeError("state is not a value of SplashScreen.state");
+            }
+        };
         return SplashScreen;
     });

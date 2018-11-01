@@ -6,7 +6,8 @@ var require = {
         "css-builder": "lib/css-builder",
         "normalize": "lib/normalize",
         "bootstrap": "lib/bootstrap",
-        "SplashScreen": "../dist/jean-splash-screen"
+        "SplashScreen": "../dist/jean-splash-screen",
+        "DomUtil": "../node_modules/jean-dom-util/dist/jean-dom-util"
     },
     stubModules: []
 };
