@@ -1,6 +1,6 @@
 {
   "name": "jean-splash-screen",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Provides functionality for displaying a splash screen",
   "main": "dist/jean-splash-screen.js",
   "scripts": {
@@ -10,7 +10,17 @@
   "author": "Jeremias Andris",
   "license": "MIT",
   "dependencies": {
-    "jean-amd": "1.0.3"
+    "jean-amd": "^1.0.3",
+    "jean-dom-element": "^1.2.2",
+    "jean-dom-util": "^1.2.3",
+    "jean-failure": "^1.0.1",
+    "jean-inheritance": "^1.0.4",
+    "jean-merge": "^1.0.0",
+    "jean-type-check": "^1.5.1"
+  },
+  "devDependencies": {
+    "require-css": "^0.1.10",
+    "text": "github:requirejs/text"
   },
   "repository": {
     "type": "git",
