@@ -1,0 +1,19 @@
+{
+  "name": "jean-splash-screen",
+  "version": "0.0.0",
+  "description": "Provides functionality for displaying a splash screen",
+  "main": "dist/jean-splash-screen.js",
+  "scripts": {
+    "test": "open spec/spec-runner.html in browser"
+  },
+  "keywords": [],
+  "author": "Jeremias Andris",
+  "license": "MIT",
+  "dependencies": {
+    "jean-amd": "1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/je-an/jean-splash-screen.git"
+  }
+}
