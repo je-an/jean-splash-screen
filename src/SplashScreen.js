@@ -29,7 +29,7 @@ define([ // jscs:ignore
             style.width = "100%";
             style.height = "100%";
             style.position = "fixed";
-            style.zIndex = "10000";
+            style.zIndex = "10000000";
             style.top = "0";
             style.left = "0";
             style.background = 'url("' + this.options.path + '")';
